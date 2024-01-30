@@ -6,10 +6,7 @@ import it.large.library.catalogue.model.BookModel;
 import it.large.library.catalogue.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static it.large.library.catalogue.utils.ConverterConfig.converterBookModelToBookResponse;
 import static it.large.library.catalogue.utils.ConverterConfig.converterBookRequestToBookModel;
@@ -23,6 +20,21 @@ public class BookController {
     // BookService è preso in carico dal framework Spring per la gestione della logica di business legata ai libri.
     @Autowired
     private BookService bookService;
+
+    // Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller
+    @GetMapping(path = "/{title_book}")
+    public ResponseEntity<String> getByName(
+            // Specifica il nome del parametro nella stringa di query dell'URL. In questo caso, si aspetta un parametro con il nome "title_book".
+            @PathVariable(name = "title_book") String titleBook
+    ) {
+
+        // Si invoca il metodo del service di BookService getBook, per recuperare il libro fittizio. Che in questo caso è una stringa.
+        String bookString = bookService.getBook(titleBook);
+
+        // Restituisce una risposta HTTP con status 200 (OK) e il corpo della risposta contiene l'oggetto bookResponse.
+        // La classe ResponseEntity consente di personalizzare la risposta HTTP, inclusi lo status e gli header.
+        return ResponseEntity.ok(bookString);
+    }
 
 
     // Indica che questo metodo risponde a richieste HTTP di tipo POST al percorso base specificato per il controller

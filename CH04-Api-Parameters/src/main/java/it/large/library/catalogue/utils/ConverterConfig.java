@@ -24,6 +24,7 @@ public class ConverterConfig {
         authorModel.setBirthday(authorRequest.getBirthday());
         authorModel.setSurname(authorRequest.getSurname());
         authorModel.setDeathDay(authorRequest.getDeathDay());
+        authorModel.setBirthCity(authorRequest.getBirthCity());
 
         return authorModel;
     }
@@ -36,17 +37,17 @@ public class ConverterConfig {
         bookResponse.setPrice(bookModel.getPrice());
         bookResponse.setAuthor(converterAuthorModelToAuthorResponse(bookModel.getAuthor()));
 
-        return null;
+        return bookResponse;
     }
 
     public static AuthorResponse converterAuthorModelToAuthorResponse(AuthorModel authorModel) {
         AuthorResponse authorResponse = new AuthorResponse();
-        authorModel.setAuthorId(authorModel.getAuthorId());
-        authorModel.setName(authorModel.getName());
-        authorModel.setSurname(authorModel.getSurname());
-        authorModel.setBirthday(authorModel.getBirthday());
-        authorModel.setDeathDay(authorModel.getDeathDay());
-        authorModel.setBirthCity(authorModel.getBirthCity());
+        authorResponse.setAuthorId(authorModel.getAuthorId());
+        authorResponse.setName(authorModel.getName());
+        authorResponse.setSurname(authorModel.getSurname());
+        authorResponse.setBirthday(authorModel.getBirthday());
+        authorResponse.setDeathDay(authorModel.getDeathDay());
+        authorResponse.setBirthCity(authorModel.getBirthCity());
 
         return authorResponse;
     }
