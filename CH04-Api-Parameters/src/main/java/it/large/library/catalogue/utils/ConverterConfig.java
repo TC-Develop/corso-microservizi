@@ -1,0 +1,55 @@
+package it.large.library.catalogue.utils;
+
+import it.large.library.catalogue.controller.payload.request.AuthorRequest;
+import it.large.library.catalogue.controller.payload.request.BookRequest;
+import it.large.library.catalogue.controller.payload.response.AuthorResponse;
+import it.large.library.catalogue.controller.payload.response.BookResponse;
+import it.large.library.catalogue.model.AuthorModel;
+import it.large.library.catalogue.model.BookModel;
+
+public class ConverterConfig {
+
+    public static BookModel converterBookRequestToBookModel(BookRequest bookRequest) {
+        BookModel bookModel = new BookModel();
+        bookModel.setTitle(bookRequest.getTitle());
+        bookModel.setPrice(bookRequest.getPrice());
+        bookModel.setAuthor(converterAuthorRequestToAuthorModel(bookRequest.getAuthor()));
+
+        return bookModel;
+    }
+
+    public static AuthorModel converterAuthorRequestToAuthorModel(AuthorRequest authorRequest) {
+        AuthorModel authorModel = new AuthorModel();
+        authorModel.setName(authorRequest.getName());
+        authorModel.setBirthday(authorRequest.getBirthday());
+        authorModel.setSurname(authorRequest.getSurname());
+        authorModel.setDeathDay(authorRequest.getDeathDay());
+
+        return authorModel;
+    }
+
+
+    public static BookResponse converterBookModelToBookResponse(BookModel bookModel) {
+        BookResponse bookResponse = new BookResponse();
+        bookResponse.setBookId(bookModel.getBookId());
+        bookResponse.setTitle(bookModel.getTitle());
+        bookResponse.setPrice(bookModel.getPrice());
+        bookResponse.setAuthor(converterAuthorModelToAuthorResponse(bookModel.getAuthor()));
+
+        return null;
+    }
+
+    public static AuthorResponse converterAuthorModelToAuthorResponse(AuthorModel authorModel) {
+        AuthorResponse authorResponse = new AuthorResponse();
+        authorModel.setAuthorId(authorModel.getAuthorId());
+        authorModel.setName(authorModel.getName());
+        authorModel.setSurname(authorModel.getSurname());
+        authorModel.setBirthday(authorModel.getBirthday());
+        authorModel.setDeathDay(authorModel.getDeathDay());
+        authorModel.setBirthCity(authorModel.getBirthCity());
+
+        return authorResponse;
+    }
+
+
+}
