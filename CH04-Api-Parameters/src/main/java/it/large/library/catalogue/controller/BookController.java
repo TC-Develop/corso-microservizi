@@ -21,13 +21,17 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    // Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller
+     * @param titleBook
+     * @return
+     */
     @GetMapping(path = "/{title_book}")
     public ResponseEntity<String> getByName(
             // Specifica il nome del parametro nella stringa di query dell'URL. In questo caso, si aspetta un parametro con il nome "title_book".
             @PathVariable(name = "title_book") String titleBook
     ) {
-
         // Si invoca il metodo del service di BookService getBook, per recuperare il libro fittizio. Che in questo caso è una stringa.
         String bookString = bookService.getBook(titleBook);
 
@@ -37,23 +41,57 @@ public class BookController {
     }
 
 
-    // Indica che questo metodo risponde a richieste HTTP di tipo POST al percorso base specificato per il controller
+    /**
+     *  Indica che questo metodo risponde a richieste HTTP di tipo POST al percorso base specificato per il controller
+     * @param bookRequest
+     * @return
+     */
     @PostMapping(path = "")
     public ResponseEntity<BookResponse> add(
             @RequestBody BookRequest bookRequest //  Il corpo della richiesta è mappato al parametro @RequestBody BookRequest bookRequest.
     ) {
         // Converte l'oggetto BookRequest ricevuto dalla richiesta HTTP in un oggetto BookModel, facendo una mappatura manuale dei campi.
         BookModel bookModel = converterBookRequestToBookModel(bookRequest);
-
         // Invoca il metodo add del bookService per aggiungere il libro. Il risultato è il libro aggiunto rappresentato da un oggetto BookModel.
         bookModel = bookService.add(bookModel);
-
         // Converte l'oggetto BookModel risultante in un oggetto BookResponse. Anche qui, si tratta  di una conversione manuale dei campi.
         BookResponse bookResponse = converterBookModelToBookResponse(bookModel);
 
-        // Restituisce una risposta HTTP con status 200 (OK) e il corpo della risposta contiene l'oggetto bookResponse.
-        // La classe ResponseEntity consente di personalizzare la risposta HTTP, inclusi lo status e gli header.
         return ResponseEntity.ok(bookResponse);
+    }
+
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo PUT al percorso base specificato per il controller
+     * @param titleBook
+     * @param bookRequest
+     * @return
+     */
+    @PutMapping(path = "/{title_book}")
+    public ResponseEntity<BookResponse> edit(
+            // Specifica il nome del parametro nella stringa di query dell'URL. In questo caso, si aspetta un parametro con il nome "title_book".
+            @PathVariable(name = "title_book") String titleBook,
+            @RequestBody BookRequest bookRequest //  Il corpo della richiesta è mappato al parametro @RequestBody BookRequest bookRequest.
+    ) {
+        BookModel bookModel = converterBookRequestToBookModel(bookRequest);
+        bookModel = bookService.edit(titleBook, bookModel);
+        BookResponse bookResponse = converterBookModelToBookResponse(bookModel);
+
+        return ResponseEntity.ok(bookResponse);
+    }
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo DELETE al percorso base specificato per il controller
+     * @param titleBook
+     * @return
+     */
+    @DeleteMapping(path = "/{title_book}")
+    public ResponseEntity<Boolean> remove(
+            @PathVariable(name = "title_book") String titleBook
+    ) {
+        Boolean success = bookService.remove(titleBook);
+
+        return ResponseEntity.ok(success);
     }
 
 }

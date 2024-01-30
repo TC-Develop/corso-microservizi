@@ -25,4 +25,30 @@ public class BookService {
         return bookModel;
     }
 
+    public BookModel edit(String titleBook, BookModel bookModel) {
+        // Libro disponibile da poter modificare
+        String availableBook = "Harry Potter e l'ordine della fenice";
+        // Semplice controllo se esiste un libro con il titolo dato in richiesta
+        if (!titleBook.equals(availableBook)) {
+            System.out.println("Non è stato possibile trovare il libro: " + bookModel.getTitle());
+            return null;
+        }
+        // Se esiste viene modificato il titolo, con la richiesta inviata
+        System.out.println("Il libro " + availableBook + " è stato modificato in: " + bookModel.getTitle());
+
+        return bookModel;
+    }
+
+    public Boolean remove(String titleBook) {
+        // Libro disponibile da poter eliminare
+        String availableBook = "Harry Potter e l'ordine della fenice";
+        if (!titleBook.equals(availableBook)) {
+            System.out.println("Non è stato possibile trovare il libro: " + titleBook);
+            return false;
+        }
+        // Se esiste viene eliminato il titolo, con la richiesta inviata
+        System.out.println("Il libro " + titleBook + " è stato cancellato");
+        return true;
+    }
+
 }
