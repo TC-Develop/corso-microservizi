@@ -7,6 +7,9 @@ import it.large.library.catalogue.controller.payload.response.BookResponse;
 import it.large.library.catalogue.model.AuthorModel;
 import it.large.library.catalogue.model.BookModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ConverterConfig {
 
     public static BookModel converterBookRequestToBookModel(BookRequest bookRequest) {
@@ -50,6 +53,16 @@ public class ConverterConfig {
         authorResponse.setBirthCity(authorModel.getBirthCity());
 
         return authorResponse;
+    }
+
+    public static List<BookResponse> converterBookModelListToBookResponseList(List<BookModel> bookModelList) {
+        BookResponse bookResponse = new BookResponse();
+        List<BookResponse> bookResponseList = new ArrayList<>();
+        for (BookModel bookModel: bookModelList) {
+            bookResponse = converterBookModelToBookResponse(bookModel);
+            bookResponseList.add(bookResponse);
+        }
+        return bookResponseList;
     }
 
 
