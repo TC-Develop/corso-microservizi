@@ -32,11 +32,34 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<!-- Si implementa quando si vuole interagire con un database relazionale utilizzando JPA per la gestione degli oggetti persistenti.
+		     Include Hibernate come implementazione JPA predefinita, ma è possibile configurare un'altra implementazione se necessario. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- Questa dipendenza fornisce il driver JDBC per PostgreSQL, consentendo all'applicazione di comunicare con un database PostgreSQL.
+			 Si utilizza quando si desidera connettersi a un database PostgreSQL dal codice Java. -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- Integra Lombok nel progetto, semplificando la scrittura del codice attraverso l'uso di annotazioni per la generazione automatica di getter, setter e altri metodi. -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<!-- Definisce le regole di validazione direttamente sugli oggetti di dominio, fornendo un modo dichiarativo per specificare come i dati dovrebbero essere validati prima di essere elaborati -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Starter per i test unitari di Spring Boot. Include JUnit, Spring Test, e altre dipendenze utili per lo sviluppo di test. -->
 		<dependency>
