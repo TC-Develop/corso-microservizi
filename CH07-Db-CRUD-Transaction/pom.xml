@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>it.large.library</groupId>
+	<artifactId>catalogue</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>catalogue</name>
+	<description>Progetto gestione catalogo libreria</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<spring-cloud.version>2023.0.0</spring-cloud.version>
+	</properties>
+
+	<dependencies>
+		<!-- Starter per lo sviluppo di applicazioni Spring Boot basate su web. Include tutto il necessario per creare un'applicazione web, inclusi Tomcat e Spring MVC.-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Fornisce strumenti di sviluppo, come il riavvio automatico dell'applicazione in fase di sviluppo senza dover ricompilare manualmente. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- Si implementa quando si vuole interagire con un database relazionale utilizzando JPA per la gestione degli oggetti persistenti.
+		     Include Hibernate come implementazione JPA predefinita, ma è possibile configurare un'altra implementazione se necessario. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- Questa dipendenza fornisce il driver JDBC per PostgreSQL, consentendo all'applicazione di comunicare con un database PostgreSQL.
+			 Si utilizza quando si desidera connettersi a un database PostgreSQL dal codice Java. -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Integra Lombok nel progetto, semplificando la scrittura del codice attraverso l'uso di annotazioni per la generazione automatica di getter, setter e altri metodi. -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- Definisce le regole di validazione direttamente sugli oggetti di dominio, fornendo un modo dichiarativo per specificare come i dati dovrebbero essere validati prima di essere elaborati -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- Starter per i test unitari di Spring Boot. Include JUnit, Spring Test, e altre dipendenze utili per lo sviluppo di test. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

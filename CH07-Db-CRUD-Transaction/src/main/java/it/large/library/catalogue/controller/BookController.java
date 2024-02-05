@@ -58,7 +58,7 @@ public class BookController {
             @RequestParam(name = "price", required = false) BigDecimal price
     ) {
         List<BookModel> bookModelList = bookService.getAllFilter(titleBook, price);
-        List<BookResponse> bookResponseList = converterBookModelListToBookResponseList(bookModelList);
+        List<BookResponse> bookResponseList = convertBookModelListToBookResponseList(bookModelList);
 
         return ResponseEntity.ok(bookResponseList);
     }
@@ -73,7 +73,7 @@ public class BookController {
             @ModelAttribute BookFilter bookFilter
     ) {
         List<BookModel> bookModelList = bookService.getAllFilteredObject(bookFilter);
-        List<BookResponse> bookResponseList = converterBookModelListToBookResponseList(bookModelList);
+        List<BookResponse> bookResponseList = convertBookModelListToBookResponseList(bookModelList);
 
         return ResponseEntity.ok(bookResponseList);
     }
