@@ -27,6 +27,7 @@ public class BookRequest implements Serializable {
     @NotNull
     private BigDecimal price;
 
-    private Set<UUID> categoriesId;
+    @NotNull
+    private Set<UUID> categoriesIds;
 
 }

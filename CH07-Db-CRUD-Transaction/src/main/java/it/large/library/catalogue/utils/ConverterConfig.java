@@ -28,7 +28,7 @@ public class ConverterConfig {
         bookModel.setTitle(bookRequest.getTitle());
         bookModel.setPrice(bookRequest.getPrice());
         bookModel.setAuthor(convertAuthorRequestToAuthorModel(bookRequest.getAuthor()));
-        bookModel.setCategories(convertCategoryRequestsToCategoryModels(bookRequest.getCategoriesId()));
+        bookModel.setCategories(convertCategoryRequestsToCategoryModels(bookRequest.getCategoriesIds()));
 
         return bookModel;
     }

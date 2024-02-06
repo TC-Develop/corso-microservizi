@@ -123,9 +123,9 @@ public class BookController {
     public ResponseEntity<Boolean> remove(
             @PathVariable(name = "book_id") UUID bookId
     ) {
-        Boolean success = bookService.remove(bookId);
+        bookService.remove(bookId);
 
-        return ResponseEntity.ok(success);
+        return ResponseEntity.ok(Boolean.TRUE);
     }
 
 }

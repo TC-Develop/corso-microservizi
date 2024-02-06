@@ -40,7 +40,8 @@ public class BookEntity {
 
     // @ManyToOne Indica una relazione many-to-one tra BookEntity e AuthorEntity.
     // Un libro può avere un solo autore, ma un autore può avere più libri.
-    @ManyToOne
+    // CascadeType.ALL ndica a JPA di applicare tutte le operazioni anche all'entità associata (AuthorEntity).
+    @ManyToOne(cascade = CascadeType.ALL)
     // @JoinColumn Configura la colonna che rappresenta la chiave esterna per la relazione many-to-one.
     // name = "author_id" specifica il nome della colonna nel database.
     // columnDefinition = "uuid" specifica il tipo di colonna nel database.
