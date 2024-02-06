@@ -2,15 +2,26 @@ package it.tcgroup.oldwar.controller.payload.request;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.UUID;
 
 public class BookRequest {
+    private UUID id;
     private String title;
-    private String autor;
+    private String author;
     private String code;
     private BigDecimal price;
     private Integer vote;
 
     private Date releaseDate;
+
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -20,12 +31,12 @@ public class BookRequest {
         this.title = title;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getCode() {

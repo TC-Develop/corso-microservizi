@@ -2,37 +2,62 @@ package it.tcgroup.oldwar.controller;
 
 import it.tcgroup.oldwar.controller.payload.request.BookRequest;
 import it.tcgroup.oldwar.controller.payload.response.BookResponse;
+import it.tcgroup.oldwar.service.BookService;
+import it.tcgroup.oldwar.service.model.Book;
 import it.tcgroup.oldwar.util.ClassCoverter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
 public class DemoController {
 
+    @Autowired
+    private BookService bookService;
+
     @GetMapping(path = "/book")
-    public ResponseEntity<BookResponse> home(){
-        BookResponse response = new BookResponse();
-        response.setAutor("T&C");
-        response.setTitle("Microservizi Java Spring");
-        response.setCode("80019301248123");
-        response.setPrice(new BigDecimal(12.31).setScale(2, RoundingMode.HALF_EVEN));
-        response.setReleaseDate(new Date());
+    public ResponseEntity<List<BookResponse>> home(){
+        List<Book> bookList = bookService.getAll();
+
+        List<BookResponse> response = new ArrayList<>();
+        for(Book book : bookList){
+            response.add(ClassCoverter.BookToBookResponse(book));
+        }
+
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping(path = "/book/{id}")
+    public ResponseEntity<BookResponse> getById(
+            @PathVariable(name = "id") UUID id){
+        Book book = bookService.getById(id);
+        BookResponse bookResponse = ClassCoverter.BookToBookResponse(book);
+
+        return ResponseEntity.ok(bookResponse);
     }
 
     @PostMapping(path = "/book")
     public ResponseEntity<BookResponse> addBook(
             @RequestBody BookRequest bookRequest){
-        BookResponse response = ClassCoverter.BookRequestToBookResponse(bookRequest);
-        response.setCode(UUID.randomUUID().toString());
+        Book book = ClassCoverter.BookRequestToBook(bookRequest);
+        book = bookService.save(book);
+        BookResponse response = ClassCoverter.BookToBookResponse(book);
+
+        return ResponseEntity.ok(response);
+    }
+
+    @PutMapping(path = "/book/{id}")
+    public ResponseEntity<BookResponse> editBook(
+            @PathVariable( name = "id") String id,
+            @RequestBody BookRequest bookRequest){
+        Book book = ClassCoverter.BookRequestToBook(bookRequest);
+        book = bookService.edit(book, UUID.fromString(id));
+        BookResponse response = ClassCoverter.BookToBookResponse(book);
+
         return ResponseEntity.ok(response);
     }
 
