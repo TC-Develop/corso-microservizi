@@ -8,6 +8,7 @@ import it.large.library.sales.document.SaleDocument;
 import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.SaleModel;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -36,7 +37,7 @@ public class ConverterConfig {
         saleDocument.setSaleId(saleModel.getSaleId());
         saleDocument.setClientId(saleModel.getClientId());
         saleDocument.setAmount(saleModel.getAmount());
-        saleDocument.setPurchaseDate(saleModel.getPurchaseDate());
+        saleDocument.setPurchaseDate(saleModel.getPurchaseDate().toInstant());
 
         List<BookDocument> bookDocuments = new ArrayList<>();
         for (BookModel bookModel: saleModel.getBooks()) {
@@ -55,7 +56,7 @@ public class ConverterConfig {
         saleModel.setSaleId(saleDocument.getSaleId());
         saleModel.setClientId(saleDocument.getClientId());
         saleModel.setAmount(saleDocument.getAmount());
-        saleModel.setPurchaseDate(saleDocument.getPurchaseDate());
+        saleModel.setPurchaseDate(Timestamp.from(saleDocument.getPurchaseDate()));
 
         List<BookModel> bookModels = new ArrayList<>();
         for (BookDocument bookDocument : saleDocument.getBooks()) {
@@ -93,5 +94,24 @@ public class ConverterConfig {
         bookResponse.setPrice(bookModel.getPrice());
         return bookResponse;
     }
+
+    public static List<SaleModel> convertDocumentListToModelList(List<SaleDocument> saleDocuments) {
+        List<SaleModel> saleModels = new ArrayList<>();
+        for (SaleDocument saleDocument : saleDocuments) {
+            SaleModel saleModel = convertDocumentToModel(saleDocument);
+            saleModels.add(saleModel);
+        }
+        return saleModels;
+    }
+
+    public static List<SaleResponse> convertModelListToResponseList(List<SaleModel> saleModels) {
+        List<SaleResponse> saleResponses = new ArrayList<>();
+        for (SaleModel saleModel : saleModels) {
+            SaleResponse saleResponse = convertModelToResponse(saleModel);
+            saleResponses.add(saleResponse);
+        }
+        return saleResponses;
+    }
+
 
 }

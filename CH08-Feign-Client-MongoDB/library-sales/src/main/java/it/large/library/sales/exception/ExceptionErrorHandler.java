@@ -1,6 +1,5 @@
 package it.large.library.sales.exception;
 
-import feign.FeignException;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

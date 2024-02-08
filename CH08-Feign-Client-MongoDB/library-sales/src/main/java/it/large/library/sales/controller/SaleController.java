@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -41,6 +43,35 @@ public class SaleController {
         SaleResponse saleResponse = ConverterConfig.convertModelToResponse(saleModel);
 
         return ResponseEntity.ok(saleResponse);
+    }
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller
+     * @param clientId
+     * @return
+     */
+    @GetMapping(path = "/{client_id}")
+    public ResponseEntity<List<SaleResponse>> get(
+            @PathVariable(name = "client_id") UUID clientId
+    ) {
+        List<SaleModel> saleModelList = saleService.get(clientId);
+        List<SaleResponse> saleResponseList = ConverterConfig.convertModelListToResponseList(saleModelList);
+
+        return ResponseEntity.ok(saleResponseList);
+    }
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller
+     * @param clientId
+     * @return
+     */
+    @GetMapping(path = "/amount/{client_id}")
+    public ResponseEntity<BigDecimal> getTotalAmountClient(
+            @PathVariable(name = "client_id") UUID clientId
+    ) {
+        BigDecimal totalAmountPerClient = saleService.getTotalAmountPerClient(clientId);
+
+        return ResponseEntity.ok(totalAmountPerClient);
     }
 
 

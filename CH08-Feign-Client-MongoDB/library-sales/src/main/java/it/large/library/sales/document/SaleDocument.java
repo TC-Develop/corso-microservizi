@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,12 +16,13 @@ import java.util.UUID;
  * I documenti sono organizzati in collezioni, che sono simili ai concetti di tabelle nei database relazionali.
  */
 
-@Getter
-@Setter
+
 // @Document: Indica che la classe è una classe di dominio che deve essere persistita in MongoDB come un documento.
 // collation = "sales": Specifica il nome della raccolta MongoDB a cui la classe è mappata. In MongoDB, una raccolta è equivalente a una tabella in un database relazionale. In questo caso, il nome della raccolta è "sales".
 // value = "sales": È un alias per collation e specifica anche il nome della raccolta MongoDB. Quindi, collation e value sono intercambiabili in questo contesto.
-@Document(collation = "sales", value = "sales")
+@Getter
+@Setter
+@Document(collection = "sales")
 public class SaleDocument {
 
     // Chiave primaria del document
@@ -30,7 +31,7 @@ public class SaleDocument {
 
     private UUID clientId;
 
-    private Timestamp purchaseDate;
+    private Instant purchaseDate;
 
     private BigDecimal amount;
 
