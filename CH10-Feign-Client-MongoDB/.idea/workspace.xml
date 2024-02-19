@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ac0bad49-9575-42eb-a8ba-d8fe5d9e16b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../CH05-Api-Validation-Exception/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH05-Api-Validation-Exception/src/main/java/it/large/library/catalogue/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH05-Api-Validation-Exception/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH05-Api-Validation-Exception/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH06-Database-Init/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH06-Database-Init/src/main/java/it/large/library/catalogue/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH06-Database-Init/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH06-Database-Init/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH07-Db-CRUD-Transaction/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH07-Db-CRUD-Transaction/src/main/java/it/large/library/catalogue/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH07-Db-CRUD-Transaction/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH07-Db-CRUD-Transaction/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH08-Security/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH08-Security/src/main/java/it/large/library/catalogue/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH08-Security/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH08-Security/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/CatalogueApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/filter/BookFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PatchValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PostValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PutValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/AuthorRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/CategoryRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/AuthorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/BookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/entity/AuthorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/entity/BookEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/entity/CategoryEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/entity/type/CategoryTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/exception/AlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/exception/ExceptionErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/model/AuthorModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/model/BookModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/model/CategoryModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/repository/AuthorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/service/AuthorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/java/it/large/library/catalogue/utils/ConverterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/main/resources/script-table/Script_create_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/test/java/it/large/library/catalogue/CatalogueApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-catalogue/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/SalesApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/client/CatalogueClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/client/response/ExternalBookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/SaleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PatchValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PostValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PutValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/request/SaleRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/response/BookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/controller/payload/response/SaleResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/document/BookDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/document/SaleDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/exception/AlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/exception/ExceptionErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/model/BookModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/model/ClientTotalAmount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/model/SaleModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/repository/SaleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/service/SaleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/java/it/large/library/sales/utils/ConverterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/test/java/it/large/library/sales/SalesApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH09-Feign-Client-MongoDB/library-sales/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/CatalogueApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/filter/BookFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PatchValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PostValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/group/PutValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/AuthorRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/BookQuantityRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/BookRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/request/CategoryRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/AuthorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/BookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/controller/payload/response/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/entity/AuthorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/entity/BookEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/entity/CategoryEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/entity/type/CategoryTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/exception/AlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/exception/ExceptionErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/model/AuthorModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/model/BookModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/model/CategoryModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/repository/AuthorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/service/AuthorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/service/BookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/java/it/large/library/catalogue/utils/ConverterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/main/resources/script-table/Script_create_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/test/java/it/large/library/catalogue/CatalogueApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-catalogue/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/SalesApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/client/CatalogueClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/client/request/ExternalBookQuantityRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/client/response/ExternalBookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/SaleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PatchValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PostValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/group/PutValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/request/BookRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/request/SaleRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/response/BookResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/controller/payload/response/SaleResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/document/BookDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/document/SaleDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/event/LibraryEventServiceManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/event/SaleBookEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/exception/AlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/exception/ExceptionErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/model/BookModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/model/ClientTotalAmount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/model/SaleModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/repository/SaleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/service/SaleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/java/it/large/library/sales/utils/ConverterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/test/java/it/large/library/sales/SalesApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CH10-Event/library-sales/src/test/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2calCBaTtV28NW49lohMeLzUq2e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/user01/Develop/corso-microservizi/CH10-Feign-Client-MongoDB",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-3183f394aec4-18ea16e8" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac0bad49-9575-42eb-a8ba-d8fe5d9e16b7" name="Changes" comment="" />
+      <created>1708357439356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708357439356</updated>
+      <workItem from="1708357440681" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

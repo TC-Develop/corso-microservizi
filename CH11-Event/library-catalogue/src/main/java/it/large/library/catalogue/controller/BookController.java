@@ -3,13 +3,13 @@ package it.large.library.catalogue.controller;
 import it.large.library.catalogue.controller.payload.filter.BookFilter;
 import it.large.library.catalogue.controller.payload.group.PostValidation;
 import it.large.library.catalogue.controller.payload.group.PutValidation;
+import it.large.library.catalogue.controller.payload.request.BookQuantityRequest;
 import it.large.library.catalogue.controller.payload.request.BookRequest;
 import it.large.library.catalogue.controller.payload.response.BookResponse;
 import it.large.library.catalogue.model.BookModel;
 import it.large.library.catalogue.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +18,11 @@ import java.util.List;
 import java.util.UUID;
 
 import static it.large.library.catalogue.utils.ConverterConfig.*;
+
+/*
+ * Questo Controller da adesso sarà solamente di esempio.
+ * Ci spostiamo su BookController.
+ */
 
 @RestController
 @RequestMapping("catalogue/api/v1/book")
@@ -33,9 +38,6 @@ public class BookController {
      * @param bookId
      * @return
      */
-    // L'annotazione @Secured è utilizzata in Spring Security per applicare sicurezza di base a livello di metodo o classe.
-    // Nell'esempio specifico @Secured("ADMIN"), il metodo o la classe annotata possono essere accessibili solo dagli utenti che hanno il ruolo "ADMIN".
-    @Secured("ADMIN")
     @GetMapping(path = "/{book_id}")
     public ResponseEntity<BookResponse> getById(
             @PathVariable(name = "book_id") UUID bookId
@@ -52,7 +54,6 @@ public class BookController {
      * @param price
      * @return
      */
-    @Secured({"ADMIN", "GUEST"})
     @GetMapping(path = "")
     public ResponseEntity<List<BookResponse>> getAll(
             @RequestParam(name = "title_book", required = false) String titleBook,
@@ -125,6 +126,23 @@ public class BookController {
             @PathVariable(name = "book_id") UUID bookId
     ) {
         bookService.remove(bookId);
+
+        return ResponseEntity.ok(Boolean.TRUE);
+    }
+
+    /**
+     * Indica che questo metodo risponde a richieste HTTP di tipo PUT al percorso base specificato per il controller
+     * Useremo questa rotta per decrementare le quantità di libri specifici
+     * Verrà invocata dal microservizio di Sales, al momento della vendita
+     * @param bookQuantityRequestList
+     * @return
+     */
+    @PutMapping(path = "/quantity")
+    public ResponseEntity<Boolean> editQuantity(
+            @Validated @RequestBody List<BookQuantityRequest> bookQuantityRequestList
+    ) {
+
+        bookService.editBookQuantity(bookQuantityRequestList);
 
         return ResponseEntity.ok(Boolean.TRUE);
     }

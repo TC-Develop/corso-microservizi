@@ -1,6 +1,7 @@
 package it.large.library.catalogue.controller;
 
 import it.large.library.catalogue.controller.payload.filter.BookFilter;
+import it.large.library.catalogue.controller.payload.group.PostValidation;
 import it.large.library.catalogue.controller.payload.group.PutValidation;
 import it.large.library.catalogue.controller.payload.request.BookRequest;
 import it.large.library.catalogue.controller.payload.response.BookResponse;
@@ -95,7 +96,7 @@ public class BookController {
     public ResponseEntity<BookResponse> add(
             // L'annotazione @Validated in Spring viene utilizzata per abilitare la validazione degli argomenti dei metodi o dei parametri della richiesta all'interno dei controller.
             // La validazione verrà comunque eseguita automaticamente prima di entrare nel metodo
-            @Validated @RequestBody BookRequest bookRequest // Il corpo della richiesta è mappato al parametro @RequestBody BookRequest bookRequest.
+            @Validated(PostValidation.class) @RequestBody BookRequest bookRequest // Il corpo della richiesta è mappato al parametro @RequestBody BookRequest bookRequest.
     ) {
         // Converte l'oggetto BookRequest ricevuto dalla richiesta HTTP in un oggetto BookModel, facendo una mappatura manuale dei campi.
         BookModel bookModel = converterBookRequestToBookModel(bookRequest);

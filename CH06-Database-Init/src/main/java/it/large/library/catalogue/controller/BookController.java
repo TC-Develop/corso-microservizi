@@ -1,6 +1,7 @@
 package it.large.library.catalogue.controller;
 
 import it.large.library.catalogue.controller.payload.filter.BookFilter;
+import it.large.library.catalogue.controller.payload.group.PostValidation;
 import it.large.library.catalogue.controller.payload.group.PutValidation;
 import it.large.library.catalogue.controller.payload.request.BookRequest;
 import it.large.library.catalogue.controller.payload.response.BookResponse;
@@ -86,7 +87,7 @@ public class BookController {
      */
     @PostMapping(path = "")
     public ResponseEntity<BookResponse> add(
-            @Validated @RequestBody BookRequest bookRequest
+            @Validated(PostValidation.class) @RequestBody BookRequest bookRequest
     ) {
         BookModel bookModel = converterBookRequestToBookModel(bookRequest);
         bookModel = bookService.add(bookModel);

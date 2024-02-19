@@ -11,6 +11,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -27,6 +28,9 @@ public class BookRequest implements Serializable {
     @NotNull
     private String title;
 
+    @NotNull
+    private Integer quantity;
+
     // Non deve essere nullo in qualsiasi caso questo oggetto viene richiesto
     @NotNull
     // Propaga la validazione all'oggetto innestato, in questo caso AuthorRequest
@@ -39,5 +43,8 @@ public class BookRequest implements Serializable {
     @Max(value = 50)
     @Min(value = 3)
     private BigDecimal price;
+
+    @NotNull
+    private Set<UUID> categoriesIds;
 
 }
