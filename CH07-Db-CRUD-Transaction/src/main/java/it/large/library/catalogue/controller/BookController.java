@@ -48,28 +48,11 @@ public class BookController {
     }
 
     /**
-     * Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller, con vari RequestParam.
-     * @param titleBook
-     * @param price
-     * @return
-     */
-    @GetMapping(path = "")
-    public ResponseEntity<List<BookResponse>> getAll(
-            @RequestParam(name = "title_book", required = false) String titleBook,
-            @RequestParam(name = "price", required = false) BigDecimal price
-    ) {
-        List<BookModel> bookModelList = bookService.getAllFilter(titleBook, price);
-        List<BookResponse> bookResponseList = convertBookModelListToBookResponseList(bookModelList);
-
-        return ResponseEntity.ok(bookResponseList);
-    }
-
-    /**
      * Indica che questo metodo risponde a richieste HTTP di tipo GET al percorso base specificato per il controller, con un ModelAttribute in richiesta HTTP.
      * @param bookFilter
      * @return
      */
-    @GetMapping(path = "/filter")
+    @GetMapping(path = "")
     public ResponseEntity<List<BookResponse>> getAllFiltered(
             @ModelAttribute BookFilter bookFilter
     ) {
