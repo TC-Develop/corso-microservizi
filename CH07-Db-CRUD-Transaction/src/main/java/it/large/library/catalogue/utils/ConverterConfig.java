@@ -27,13 +27,13 @@ public class ConverterConfig {
         BookModel bookModel = new BookModel();
         bookModel.setTitle(bookRequest.getTitle());
         bookModel.setPrice(bookRequest.getPrice());
-        bookModel.setAuthor(convertAuthorRequestToAuthorModel(bookRequest.getAuthor()));
+        bookModel.setAuthor(ConverterConfig.converterAuthorRequestToAuthorModel(bookRequest.getAuthor()));
         bookModel.setCategories(convertCategoryRequestsToCategoryModels(bookRequest.getCategoriesIds()));
 
         return bookModel;
     }
 
-    public static AuthorModel convertAuthorRequestToAuthorModel(AuthorRequest authorRequest) {
+    public static AuthorModel converterAuthorRequestToAuthorModel(AuthorRequest authorRequest) {
         AuthorModel authorModel = new AuthorModel();
         authorModel.setName(authorRequest.getName());
         authorModel.setBirthday(authorRequest.getBirthday());
@@ -201,5 +201,38 @@ public class ConverterConfig {
             bookModels.add(bookModel);
         }
         return bookModels;
+    }
+    public static AuthorEntity converterAuthorModelToAuthorEntity(AuthorModel authorModel) {
+        AuthorEntity authorEntity = new AuthorEntity();
+        authorEntity.setName(authorModel.getName());
+        authorEntity.setBirthday(authorModel.getBirthday());
+        authorEntity.setSurname(authorModel.getSurname());
+        authorEntity.setDeathDay(authorModel.getDeathDay());
+        authorEntity.setBirthCity(authorModel.getBirthCity());
+
+        return authorEntity;
+    }
+
+    public static AuthorModel converterAuthorEntityToAuthorModel(AuthorEntity authorEntity) {
+        AuthorModel authorModel = new AuthorModel();
+        authorModel.setAuthorId(authorEntity.getAuthorId());
+        authorModel.setName(authorEntity.getName());
+        authorModel.setBirthday(authorEntity.getBirthday());
+        authorModel.setSurname(authorEntity.getSurname());
+        authorModel.setDeathDay(authorEntity.getDeathDay());
+        authorModel.setBirthCity(authorEntity.getBirthCity());
+
+        return authorModel;
+    }
+    public static AuthorResponse converterAuthorModelToAuthorResponse(AuthorModel authorModel) {
+        AuthorResponse authorResponse = new AuthorResponse();
+        authorResponse.setAuthorId(authorModel.getAuthorId());
+        authorResponse.setName(authorModel.getName());
+        authorResponse.setSurname(authorModel.getSurname());
+        authorResponse.setBirthday(authorModel.getBirthday());
+        authorResponse.setDeathDay(authorModel.getDeathDay());
+        authorResponse.setBirthCity(authorModel.getBirthCity());
+
+        return authorResponse;
     }
 }
