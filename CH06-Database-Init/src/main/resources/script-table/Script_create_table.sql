@@ -1,5 +1,5 @@
 --1 Script per creare la tabella "catalogue_authors"
-CREATE TABLE catalogue_authors (
+CREATE TABLE public.catalogue_authors (
     author_id UUID NOT NULL,
     name VARCHAR(255) NOT NULL,
     surname VARCHAR(255) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE catalogue_authors (
 );
 
 --2 Script per creare la tabella "catalogue_books"
-CREATE TABLE catalogue_books (
+CREATE TABLE public.catalogue_books (
     book_id UUID NOT NULL,
     title VARCHAR(255) NOT NULL,
     author_id UUID NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE catalogue_books (
 
 
 --3 Script per creare la tabella "catalogue_categories"
-CREATE TABLE catalogue_categories (
+CREATE TABLE public.catalogue_categories (
     category_id UUID NOT NULL,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255),
@@ -31,7 +31,7 @@ CREATE TABLE catalogue_categories (
 
 
 --4 Script per creare la tabella di join "book_category" per la relazione many-to-many
-CREATE TABLE book_category (
+CREATE TABLE public.book_category (
     book_id UUID,
     category_id UUID,
     PRIMARY KEY (book_id, category_id),

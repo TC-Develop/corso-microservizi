@@ -4,6 +4,7 @@ import it.large.library.catalogue.controller.payload.request.AuthorRequest;
 import it.large.library.catalogue.controller.payload.request.BookRequest;
 import it.large.library.catalogue.controller.payload.response.AuthorResponse;
 import it.large.library.catalogue.controller.payload.response.BookResponse;
+import it.large.library.catalogue.entity.AuthorEntity;
 import it.large.library.catalogue.model.AuthorModel;
 import it.large.library.catalogue.model.BookModel;
 
@@ -31,6 +32,29 @@ public class ConverterConfig {
         authorModel.setSurname(authorRequest.getSurname());
         authorModel.setDeathDay(authorRequest.getDeathDay());
         authorModel.setBirthCity(authorRequest.getBirthCity());
+
+        return authorModel;
+    }
+
+    public static AuthorEntity converterAuthorModelToAuthorEntity(AuthorModel authorModel) {
+        AuthorEntity authorEntity = new AuthorEntity();
+        authorEntity.setName(authorModel.getName());
+        authorEntity.setBirthday(authorModel.getBirthday());
+        authorEntity.setSurname(authorModel.getSurname());
+        authorEntity.setDeathDay(authorModel.getDeathDay());
+        authorEntity.setBirthCity(authorModel.getBirthCity());
+
+        return authorEntity;
+    }
+
+    public static AuthorModel converterAuthorEntityToAuthorModel(AuthorEntity authorEntity) {
+        AuthorModel authorModel = new AuthorModel();
+        authorModel.setAuthorId(authorEntity.getAuthorId());
+        authorModel.setName(authorEntity.getName());
+        authorModel.setBirthday(authorEntity.getBirthday());
+        authorModel.setSurname(authorEntity.getSurname());
+        authorModel.setDeathDay(authorEntity.getDeathDay());
+        authorModel.setBirthCity(authorEntity.getBirthCity());
 
         return authorModel;
     }
