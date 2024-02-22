@@ -1,8 +1,11 @@
 package it.large.library.catalogue.exception;
 
 import lombok.extern.apachecommons.CommonsLog;
+import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -47,6 +50,30 @@ public class ExceptionErrorHandler {
         }
 
         // Viene creata e restituita un'istanza di ResponseEntity contenente l'oggetto ExceptionResponse e il codice di stato HTTP determinato in base al tipo di eccezione.
+        return new ResponseEntity<>(exceptionResponse, code);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<Object> errorHandlerValidation(MethodArgumentNotValidException exception){
+
+
+        ExceptionResponse exceptionResponse = new ExceptionResponse();
+        exceptionResponse.setMessage(StringUtils.join(
+                exception.getBindingResult().getAllErrors().stream().map( objectError -> {
+                    String error="";
+                    if(objectError instanceof FieldError)
+                    {
+                        error = ((FieldError) objectError).getField() +": ";
+                    }
+                    error = error + objectError.getDefaultMessage();
+                    return error;
+                }).toList()
+                , ';'));
+
+
+
+        HttpStatus code = HttpStatus.BAD_REQUEST;
+
         return new ResponseEntity<>(exceptionResponse, code);
     }
 
