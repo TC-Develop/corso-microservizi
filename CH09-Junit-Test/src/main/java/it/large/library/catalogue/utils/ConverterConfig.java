@@ -83,7 +83,6 @@ public class ConverterConfig {
         for (CategoryModel categoryModel : categoryModels) {
             CategoryResponse categoryResponse = new CategoryResponse();
             categoryResponse.setCategoryId(categoryModel.getCategoryId());
-            categoryResponse.setCategoryId(categoryModel.getCategoryId());
             categoryResponse.setName(categoryModel.getName());
             categoryResponse.setDescription(categoryModel.getDescription());
             categoryResponse.setType(categoryModel.getType());
@@ -133,8 +132,8 @@ public class ConverterConfig {
         bookModel.setBookId(bookEntity.getBookId());
         bookModel.setTitle(bookEntity.getTitle());
         bookModel.setPrice(bookEntity.getPrice());
-        bookModel.setAuthor(convertAuthorEntityToAuthorModel(bookEntity.getAuthor()));
         bookModel.setCategories(convertCategoryEntitiesToCategoryModels(bookEntity.getCategories()));
+        bookModel.setAuthor(convertAuthorEntityToAuthorModel(bookEntity.getAuthor()));
 
         return bookModel;
     }

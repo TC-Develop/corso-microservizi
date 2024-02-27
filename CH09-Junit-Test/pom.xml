@@ -59,7 +59,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<scope>test</scope>
 		</dependency>
 		<!-- Starter per i test unitari di Spring Boot. Include JUnit, Spring Test, e altre dipendenze utili per lo sviluppo di test. -->
 		<dependency>
@@ -72,7 +72,11 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
