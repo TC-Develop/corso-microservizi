@@ -4,7 +4,6 @@ import it.large.library.sales.client.CatalogueClient;
 import it.large.library.sales.client.response.ExternalBookResponse;
 import it.large.library.sales.document.SaleDocument;
 import it.large.library.sales.event.SaleBookEvent;
-import it.large.library.sales.exception.NotFoundException;
 import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.ClientTotalAmount;
 import it.large.library.sales.model.SaleModel;
@@ -88,7 +87,6 @@ public class SaleService {
         for (BookModel bookModel: saleModel.getBooks()) {
             BookModel internalBookModel = new BookModel();
             ExternalBookResponse externalBookResponse;
-            try {
                 // Per ogni id inviato in input andiamo a controllare l'esistenza del libro e del recupero delle informaizoni del libro.
                 externalBookResponse = catalogueClient.getBookById(bookModel.getBookId()).getBody();
                 if (externalBookResponse != null) {
@@ -99,10 +97,6 @@ public class SaleService {
                     internalBookModel.setQuantity(bookModel.getQuantity());
                     internalBookModels.add(internalBookModel);
                 }
-            } catch (RuntimeException e) {
-                e.printStackTrace();
-                throw new NotFoundException("Libro non trovato: " + e.getMessage());
-            }
         }
         return internalBookModels;
     }
