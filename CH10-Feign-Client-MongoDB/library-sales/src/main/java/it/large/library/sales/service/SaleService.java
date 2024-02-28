@@ -17,7 +17,6 @@ import org.springframework.data.mongodb.core.aggregation.GroupOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -42,7 +41,7 @@ public class SaleService {
         List<BookModel> internalBookModels = retrieveBooksFromCatalogue(saleModel);
 
         // Metodo per calcolare il totale dell'importo della vendita dei libri.
-        BigDecimal totalAmount = getTotalAmount(internalBookModels);
+        Double totalAmount = getTotalAmount(internalBookModels);
 
         // Impostiamo i dati necessari all'oggetto model di vendita.
         saleModel.setBooks(internalBookModels);
@@ -84,10 +83,10 @@ public class SaleService {
         return internalBookModels;
     }
 
-    private static BigDecimal getTotalAmount(List<BookModel> internalBookModels) {
-        BigDecimal totalAmount = BigDecimal.ZERO;
+    private static Double getTotalAmount(List<BookModel> internalBookModels) {
+        Double totalAmount = 0D;
         for (BookModel book: internalBookModels) {
-            totalAmount = totalAmount.add(book.getPrice());
+            totalAmount = totalAmount + book.getPrice();
         }
         return totalAmount;
     }
@@ -101,7 +100,7 @@ public class SaleService {
     }
 
 
-    public BigDecimal getTotalAmountPerClient(UUID clientId) {
+    public Double getTotalAmountPerClient(UUID clientId) {
         // [
         //    {
         //    $match: {

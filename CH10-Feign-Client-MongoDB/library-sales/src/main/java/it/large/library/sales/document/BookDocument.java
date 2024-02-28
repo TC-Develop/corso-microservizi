@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 @Setter
@@ -16,6 +15,6 @@ public class BookDocument {
 
     private String title;
 
-    private BigDecimal price;
+    private Double price;
 
 }

@@ -2,7 +2,6 @@ package it.large.library.sales.model;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +15,7 @@ public class SaleModel {
 
     private Timestamp purchaseDate;
 
-    private BigDecimal amount;
+    private Double amount;
 
     private List<BookModel> books;
 

@@ -3,7 +3,6 @@ package it.large.library.sales.controller.payload.response;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
@@ -17,7 +16,7 @@ public class SaleResponse implements Serializable {
 
     private Timestamp purchaseDate;
 
-    private BigDecimal amount;
+    private Double amount;
 
     private List<BookResponse> books;
 

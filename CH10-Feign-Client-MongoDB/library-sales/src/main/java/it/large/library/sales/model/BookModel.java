@@ -2,7 +2,6 @@ package it.large.library.sales.model;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -12,6 +11,6 @@ public class BookModel {
 
     private String title;
 
-    private BigDecimal price;
+    private Double price;
 
 }
