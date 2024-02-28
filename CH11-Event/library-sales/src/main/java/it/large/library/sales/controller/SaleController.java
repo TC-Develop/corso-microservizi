@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -66,10 +65,10 @@ public class SaleController {
      * @return
      */
     @GetMapping(path = "/amount/{client_id}")
-    public ResponseEntity<BigDecimal> getTotalAmountClient(
+    public ResponseEntity<Double> getTotalAmountClient(
             @PathVariable(name = "client_id") UUID clientId
     ) {
-        BigDecimal totalAmountPerClient = saleService.getTotalAmountPerClient(clientId);
+        Double totalAmountPerClient = saleService.getTotalAmountPerClient(clientId);
 
         return ResponseEntity.ok(totalAmountPerClient);
     }

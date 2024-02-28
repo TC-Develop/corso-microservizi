@@ -26,7 +26,6 @@ public class ConverterConfig {
             BookModel bookModel = new BookModel();
             bookModel.setBookId(bookRequest.getBookId());
             bookModel.setQuantity(bookRequest.getQuantity());
-            bookModel.setPrice(bookRequest.getPrice());
             bookModels.add(bookModel);
         }
         saleModel.setBooks(bookModels);
