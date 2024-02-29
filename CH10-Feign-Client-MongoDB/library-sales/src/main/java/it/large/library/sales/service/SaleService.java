@@ -6,6 +6,7 @@ import it.large.library.sales.document.SaleDocument;
 import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.ClientTotalAmount;
 import it.large.library.sales.model.SaleModel;
+import it.large.library.sales.repository.CustomRepository;
 import it.large.library.sales.repository.SaleRepository;
 import it.large.library.sales.utils.ConverterConfig;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public class SaleService {
 
     @Autowired
     private SaleRepository saleRepository;
+
+    @Autowired
+    private CustomRepository customRepository;
 
     // Si inietta l'interfaccia responsabile di gestire le call al microservizio di catalogo dei libri.
     @Autowired
@@ -88,8 +92,10 @@ public class SaleService {
 
 
     public List<SaleModel> get(UUID clientId) {
-        // Recupera le vendite legate ad uno specifico cliente
+        // Recupera le vendite legate ad uno specifico cliente con semplice query nativa
         List<SaleDocument> saleDocumentList = saleRepository.getSalesByClientId(clientId);
+        // Recupera le vendite legate ad uno specifico cliente con una repository custom
+//        List<SaleDocument> saleDocumentList = customRepository.filter(clientId);
 
         return ConverterConfig.convertDocumentListToModelList(saleDocumentList);
     }
