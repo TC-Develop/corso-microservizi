@@ -1,0 +1,7 @@
+#headerBar{
+    background-color: var(--bs-primary);
+}
+
+#welcomeBar{
+    color: white;
+}
