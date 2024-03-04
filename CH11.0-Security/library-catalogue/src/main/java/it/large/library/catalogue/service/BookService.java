@@ -50,7 +50,7 @@ public class BookService {
      */
     public List<BookModel> getAllFilter(String titleBook, BigDecimal price) {
         // Libri trovati in db grazie al metodo della repository di BookEntity (Vedere metodo in BookRepository)
-        List<BookEntity> bookEntityList = bookRepository.getByTitleOrPrice(titleBook, price);
+        List<BookEntity> bookEntityList = bookRepository.findAll();
         // Convertiamo le entità libri in model
         List<BookModel> bookModelList = convertBookEntitiesToBookModels(bookEntityList);
 
