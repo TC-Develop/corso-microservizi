@@ -17,4 +17,14 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping(path = "/vetrina")
+    public String getVetrina(){
+        return "vetrina";
+    }
+
+
+    @GetMapping(path = "/admin")
+    public String getAdmin(){
+        return "admin";
+    }
 }

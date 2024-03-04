@@ -10,6 +10,11 @@
 </head>
 <body>
     <div th:insert="~{fragment/base :: header}"></div>
+    <div class="container">
+        <div class="row">
+            <a class="col-3" href="/admin">Amministrazione</a> <a class="col-3" href="/vetrina">Vetrina</a>
+        </div>
+    </div>
     <h1>Hello <span th:text="${user.username}"></span> </h1>
 
     <div th:insert="~{fragment/base :: copy}"></div>

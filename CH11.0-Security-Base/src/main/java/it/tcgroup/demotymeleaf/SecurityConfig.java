@@ -44,7 +44,8 @@ public class SecurityConfig {
         });
         http.httpBasic(httpBasic -> httpBasic.disable())
                 .authorizeHttpRequests(authorize -> {
-                    authorize.requestMatchers("/login", "/img/spring-security.svg").permitAll()
+                    authorize.requestMatchers("/login","/vetrina", "/img/spring-security.svg").permitAll()
+                            .requestMatchers("/admin").hasRole("ADMIN")
                             .requestMatchers("/**").authenticated();
                 });
         return http.build();
@@ -53,9 +54,9 @@ public class SecurityConfig {
     @Bean
     protected List<UserDetails> userList(){
         List<UserDetails> userList = new ArrayList<>();
-        userList.add(new WebUser("admin", "admin",List.of(new SimpleGrantedAuthority("admin"))));
-        userList.add(new WebUser("user", "user",List.of(new SimpleGrantedAuthority("user"))));
-        userList.add(new WebUser("guest", "guest",List.of(new SimpleGrantedAuthority("guest"))));
+        userList.add(new WebUser("admin", "admin",List.of(new SimpleGrantedAuthority("ROLE_ADMIN"))));
+        userList.add(new WebUser("user", "user",List.of(new SimpleGrantedAuthority("ROLE_USER"))));
+        userList.add(new WebUser("guest", "guest",List.of(new SimpleGrantedAuthority("ROLE_GUEST"))));
         return userList;
     }
 
