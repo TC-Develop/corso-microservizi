@@ -18,10 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-// EnableAspectJAutoProxy(proxyTargetClass = true):
-// Questa annotazione abilita il supporto per la creazione di proxy di aspetti con AOP (Aspect-Oriented Programming).
-// Gli aspetti sono utilizzati per modularizzare le preoccupazioni trasversali, come il logging, la sicurezza, la gestione delle transazioni, ecc.
-@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class LibraryEventServiceManagement {
 
     @Autowired
@@ -31,12 +27,16 @@ public class LibraryEventServiceManagement {
     // Questo è utile per operazioni che possono essere eseguite in modo indipendente e non influenzano il flusso principale dell'applicazione.
     // In questo caso, il metodo reduceBookQuantity sarà eseguito in modo asincrono.
     @Async
-    @Transactional(isolation = Isolation.REPEATABLE_READ, propagation = Propagation.REQUIRED)
     // @TransactionalEventListener: Questa annotazione identifica il metodo come un ascoltatore di eventi transazionali.
     // Il metodo reduceBookQuantity verrà chiamato quando si verifica un evento di tipo SaleBookEvent dopo il completamento della transazione.
-    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMPLETION, classes = SaleBookEvent.class)
+    @TransactionalEventListener(
+            phase = TransactionPhase.AFTER_COMPLETION,
+            classes = SaleBookEvent.class,
+            condition ="#saleBookEvent.getSource().getAmount() > 0",
+            fallbackExecution = true
+    )
     public void reduceBookQuantity(SaleBookEvent saleBookEvent) {
-        // Questo metodo è in ascolto nei punti in cui viene avviato l'evento SaleBookEvent (vedere SaleService rigo 77).
+        // Questo metodo è in ascolto nei punti in cui viene avviato l'evento SaleBookEvent (vedere SaleService rigo 75).
         // Apena invocato dall'evento SaleBookEvent, e dopo la buona riuscita della transazione della vendita, avvia il feign client verso Catalogue, per modificare le quanità dei libri venduti.
         SaleModel saleModel = (SaleModel) saleBookEvent.getSource();
         List<ExternalBookQuantityRequest> externalBookQuantityRequests = new ArrayList<>();
