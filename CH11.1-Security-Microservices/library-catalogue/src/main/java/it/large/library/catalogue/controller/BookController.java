@@ -57,8 +57,8 @@ public class BookController {
     public ResponseEntity<List<BookResponse>> getAll(
             @RequestParam(name = "title_book", required = false) String titleBook,
             @RequestParam(name = "price", required = false) BigDecimal price,
-            @RequestHeader String username,
-            @RequestHeader String[] roles
+            @RequestHeader(required = false) String username,
+            @RequestHeader(required = false) String[] roles
     ) {
         List<BookModel> bookModelList = bookService.getAllFilter(titleBook, price);
         List<BookResponse> bookResponseList = convertBookModelListToBookResponseList(bookModelList);
