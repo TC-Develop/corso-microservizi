@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,7 +15,7 @@ public class SaleResponse implements Serializable {
 
     private UUID clientId;
 
-    private Timestamp purchaseDate;
+    private Instant purchaseDate;
 
     private Double amount;
 

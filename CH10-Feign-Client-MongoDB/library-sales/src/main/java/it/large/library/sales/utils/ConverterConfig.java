@@ -37,7 +37,7 @@ public class ConverterConfig {
         saleDocument.setSaleId(saleModel.getSaleId());
         saleDocument.setClientId(saleModel.getClientId());
         saleDocument.setAmount(saleModel.getAmount());
-        saleDocument.setPurchaseDate(saleModel.getPurchaseDate().toInstant());
+        saleDocument.setPurchaseDate(saleModel.getPurchaseDate());
 
         List<BookDocument> bookDocuments = new ArrayList<>();
         for (BookModel bookModel: saleModel.getBooks()) {
@@ -56,7 +56,7 @@ public class ConverterConfig {
         saleModel.setSaleId(saleDocument.getSaleId());
         saleModel.setClientId(saleDocument.getClientId());
         saleModel.setAmount(saleDocument.getAmount());
-        saleModel.setPurchaseDate(Timestamp.from(saleDocument.getPurchaseDate()));
+        saleModel.setPurchaseDate(saleDocument.getPurchaseDate());
 
         List<BookModel> bookModels = new ArrayList<>();
         for (BookDocument bookDocument : saleDocument.getBooks()) {

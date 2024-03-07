@@ -3,6 +3,7 @@ package it.large.library.sales.service;
 import it.large.library.sales.client.CatalogueClient;
 import it.large.library.sales.client.response.ExternalBookResponse;
 import it.large.library.sales.document.SaleDocument;
+import it.large.library.sales.exception.NotFoundException;
 import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.ClientTotalAmount;
 import it.large.library.sales.model.SaleModel;
@@ -17,7 +18,6 @@ import org.springframework.data.mongodb.core.aggregation.GroupOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class SaleService {
 
         // Impostiamo i dati necessari all'oggetto model di vendita.
         saleModel.setBooks(internalBookModels);
-        saleModel.setPurchaseDate(Timestamp.from(Instant.now()));
+        saleModel.setPurchaseDate(Instant.now());
         saleModel.setAmount(totalAmount);
 
         // Conversione del model a document, per salvare la vendita in db.

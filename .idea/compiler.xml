@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sales (1)" />
+        <module name="catalogue (10)" />
+        <module name="oldwar" />
+        <module name="sales" />
+        <module name="catalogue" />
+        <module name="catalogue (2)" />
+        <module name="catalogue (1)" />
+        <module name="catalogue (9)" />
+        <module name="catalogue (8)" />
+        <module name="catalogue (7)" />
+        <module name="catalogue (6)" />
+        <module name="catalogue (5)" />
+        <module name="catalogue (4)" />
+        <module name="catalogue (3)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="catalogue" options="-parameters" />
+      <module name="catalogue (1)" options="-parameters" />
+      <module name="catalogue (10)" options="-parameters" />
+      <module name="catalogue (2)" options="-parameters" />
+      <module name="catalogue (3)" options="-parameters" />
+      <module name="catalogue (4)" options="-parameters" />
+      <module name="catalogue (5)" options="-parameters" />
+      <module name="catalogue (6)" options="-parameters" />
+      <module name="catalogue (7)" options="-parameters" />
+      <module name="catalogue (8)" options="-parameters" />
+      <module name="catalogue (9)" options="-parameters" />
+      <module name="sales" options="-parameters" />
+      <module name="sales (1)" options="-parameters" />
+    </option>
+  </component>
+</project>

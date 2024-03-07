@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/CH11-Event/library-sales/pom.xml" />
+        <option value="$PROJECT_DIR$/CH11-Event/library-catalogue/pom.xml" />
+        <option value="$PROJECT_DIR$/CH08-Security/pom.xml" />
+        <option value="$PROJECT_DIR$/CH09-Junit-Test/pom.xml" />
+        <option value="$PROJECT_DIR$/CH02-Jackson-Mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/CH03-Api-Example/pom.xml" />
+        <option value="$PROJECT_DIR$/CH06-Database-Init/pom.xml" />
+        <option value="$PROJECT_DIR$/CH04-Api-Parameters/pom.xml" />
+        <option value="$PROJECT_DIR$/CH01-Spring-Initializr/pom.xml" />
+        <option value="$PROJECT_DIR$/CH07-Db-CRUD-Transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/CH10-Feign-Client-MongoDB/library-sales/pom.xml" />
+        <option value="$PROJECT_DIR$/CH10-Feign-Client-MongoDB/library-catalogue/pom.xml" />
+        <option value="$PROJECT_DIR$/CH00 - Prima di Spring Boot/pom.xml" />
+        <option value="$PROJECT_DIR$/CH05-Api-Validation-Exception/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

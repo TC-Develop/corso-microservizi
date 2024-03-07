@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/CH00 - Prima di Spring Boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH00 - Prima di Spring Boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH01-Spring-Initializr/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH02-Jackson-Mvc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH03-Api-Example/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH04-Api-Parameters/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH05-Api-Validation-Exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH06-Database-Init/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH07-Db-CRUD-Transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH08-Security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH09-Junit-Test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH10-Feign-Client-MongoDB/library-catalogue/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH10-Feign-Client-MongoDB/library-sales/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH11-Event/library-catalogue/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CH11-Event/library-sales/src/main/java" charset="UTF-8" />
+  </component>
+</project>
