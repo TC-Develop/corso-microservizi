@@ -6,6 +6,7 @@ import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.SaleModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -32,8 +33,8 @@ public class LibraryEventServiceManagement {
     @TransactionalEventListener(
             phase = TransactionPhase.AFTER_COMPLETION,
             classes = SaleBookEvent.class,
-            condition ="#saleBookEvent.getSource().getAmount() > 0",
-            fallbackExecution = true
+            condition ="#saleBookEvent.getSource().getAmount() > 0"
+//            fallbackExecution = true
     )
     public void reduceBookQuantity(SaleBookEvent saleBookEvent) {
         // Questo metodo è in ascolto nei punti in cui viene avviato l'evento SaleBookEvent (vedere SaleService rigo 75).
