@@ -5,13 +5,8 @@ import it.large.library.sales.client.request.ExternalBookQuantityRequest;
 import it.large.library.sales.model.BookModel;
 import it.large.library.sales.model.SaleModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
@@ -31,7 +26,7 @@ public class LibraryEventServiceManagement {
     // @TransactionalEventListener: Questa annotazione identifica il metodo come un ascoltatore di eventi transazionali.
     // Il metodo reduceBookQuantity verrà chiamato quando si verifica un evento di tipo SaleBookEvent dopo il completamento della transazione.
     @TransactionalEventListener(
-            phase = TransactionPhase.AFTER_COMPLETION,
+            phase = TransactionPhase.AFTER_COMMIT,
             classes = SaleBookEvent.class,
             condition ="#saleBookEvent.getSource().getAmount() > 0"
 //            fallbackExecution = true
